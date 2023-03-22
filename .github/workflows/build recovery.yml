@@ -78,8 +78,8 @@ jobs:
       run: |
         mkdir ${GITHUB_WORKSPACE}/workspace
         cd ${GITHUB_WORKSPACE}/workspace
-        git config --global user.name "Hikaru's Action-Build-Bot"
-        git config --global user.email "Android@teio.tk"
+        git config --global user.name "Huexxx's Action-Build-Bot"
+        git config --global user.email "huexxx@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
         
     - name: Repo Sync
@@ -103,8 +103,8 @@ jobs:
     - name: Generate info
       run: |
         cd ${GITHUB_WORKSPACE}/workspace
-        wget https://raw.githubusercontent.com/xiaoleGun/build_recovery_action/main/get_info.sh
-        echo "BUILD_TIME=$(TZ=Asia/Shanghai date "+%Y%m%d%H%M")" >> $GITHUB_ENV
+        wget https://raw.githubusercontent.com/Huexxx/build_recovery_action/main/get_info.sh
+        echo "BUILD_TIME=$(TZ=Europe/Madrid date "+%Y%m%d%H%M")" >> $GITHUB_ENV
         bash get_info.sh ${{ github.event.inputs.DEVICE_NAME }} ${{ github.event.inputs.MAKEWHAT }}
 
     - name: Upload to Release...

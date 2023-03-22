@@ -13,7 +13,7 @@ device_product=$(cat out/target/product/$DEVICE/recovery/root/default.prop | gre
 andriod_spl=$(cat out/target/product/$DEVICE/recovery/root/default.prop | grep "ro.build.version.security_patch" | head -n 1 | cut -d "=" -f 2)
 device_model=$(cat out/target/product/$DEVICE/recovery/root/default.prop | grep "ro.product.system.model" | head -n 1 | cut -d "=" -f 2)
 android_image_size=$(echo `(du -sm out/target/product/$DEVICE/$MAKEWHAT.img | awk '{print $1}' | sed 's/$/&MB/')`)
-build_date=$(TZ=Asia/Shanghai date "+%Y-%m-%d %H:%M")
+build_date=$(TZ=Europe/Madrid date "+%Y-%m-%d %H:%M")
 ofox=$(cat out/target/product/$DEVICE/recovery/root/default.prop | grep "ro.product.system.name" | head -n 1 | cut -d "=" -f 2)
 twrp=$(cat out/target/product/$DEVICE/recovery/root/default.prop | grep "ro.product.system.name" | head -n 1 | cut -d "=" -f 2)
 
