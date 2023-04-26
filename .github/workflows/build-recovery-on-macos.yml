@@ -65,7 +65,7 @@ jobs:
         echo "BUILD_TIME=$(TZ=Europe/Madrid date "+%Y%m%d%H%M")" >> $GITHUB_ENV
         mka ${{ env.MAKEWHAT }}image
 
-    - name: Upload ${{ env.MAKEWHAT }} image
+    - name: Upload recovery image
       uses: actions/upload-artifact@v3
       with:
         name: ${{ env.MAKEWHAT }}-${{ env.DEVICE_NAME }}-${{ env.BUILD_TIME }}
